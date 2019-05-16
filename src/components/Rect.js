@@ -24,8 +24,9 @@ export default class Rect extends React.Component {
       fill = {},   // 内部填充
       stroke = {}, // 边框
       style,       // 自定义样式
+      ...others
     } = this.props;
-    let _style = {}, // 自定义样式
+    let _style = {}, // 存放fill、stroke与自定义样式
       _radius = {};  // 圆角相关
 
     // 合并填充样式的逻辑
@@ -61,6 +62,7 @@ export default class Rect extends React.Component {
       <rect x={x} y={y} width={width} height={height}
         {..._radius}
         style={_style}
+        {...others}
       />
     );
   }
