@@ -7,8 +7,8 @@ class App extends React.Component {
     return (
       <OnSvg width='400' height='400'>
         <Rect x={10} y={10} width='100' height='100'
-          radius={{ width: 0, height: 0 }}
-          fill={{ color: 'red', opacity: 0 }}
+          radius={{ x: 0, y: 50 }}
+          fill={{ color: 'red', opacity: 1 }}
           stroke={{ color: 'black', width: 10, dasharray: '1 6' }}
         />
         <Rect x={110} y={110} width='100' height='100'
