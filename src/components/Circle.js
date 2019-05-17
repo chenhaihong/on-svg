@@ -31,11 +31,13 @@ export default class Circle extends React.Component {
     const {
       color: strokeColor,
       width: strokeWidth = 0,
+      linecap: strokeLinecap,
       dasharray: strokeDasharray,
     } = stroke;
     strokeColor && (_style.stroke = strokeColor);
     (strokeWidth || strokeWidth === 0) && (_style.strokeWidth = strokeWidth);
     strokeDasharray && (_style.strokeDasharray = strokeDasharray);
+    strokeLinecap && (_style.strokeLinecap = strokeLinecap);
 
     // 合并自定义style属性的逻辑
     style && (_style = { ..._style, ...style });

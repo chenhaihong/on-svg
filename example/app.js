@@ -25,9 +25,9 @@ class App extends React.Component {
           stroke={{ color: 'black', width: 5, dasharray: '1 3' }} />
         <Ellipse x={200} y={200} radius={80}
           fill={{ color: 'yellow', opacity: 0 }}
-          stroke={{ color: 'black', width: 5, dasharray: '1 3' }} />
+          stroke={{ color: 'black', width: 5, dasharray: '1 10', linecap: 'round' }} />
       </OnSvg>
-    )
+    );
   }
 }
 
