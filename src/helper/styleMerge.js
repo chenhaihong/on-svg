@@ -12,13 +12,19 @@ export default function styleMerge(fill, stroke, style) {
   if (Object.prototype.toString.call(fill) === '[object Object]') {
     const {
       color: fillColor = 'none',
+      rule: fillRule,
       opacity: fillOpacity,
     } = fill;
     fillColor && (_style.fill = fillColor);
     (fillOpacity || fillOpacity === 0) && (_style.fillOpacity = fillOpacity);
+    fillRule && (_style.fillRule = fillRule);
   } else if (typeof fill === 'string') {
     _style.fill = fill;
   }
+
+  // [bugfix]：浏览器默认会加上填充色，这里去除这个默认显示问题。
+  // 这行代码，只是为了提醒最好加上填充色。
+  !_style.fill && (_style.fill = 'none');
 
   // 合并stroke样式的逻辑
   if (Object.prototype.toString.call(stroke) === '[object Object]') {

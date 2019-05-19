@@ -1,7 +1,7 @@
 import React from 'react';
 import styleMerge from '../helper/styleMerge';
 
-export default class Polyline extends React.Component {
+export default class Polygon extends React.Component {
   render() {
     const {
       points,
@@ -23,7 +23,7 @@ export default class Polyline extends React.Component {
     }
 
     return (
-      <polyline points={_points} style={_style} {...others} />
+      <polygon points={_points} style={_style} {...others} />
     );
   }
 }

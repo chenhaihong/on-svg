@@ -11,6 +11,9 @@ export default class Line extends React.Component {
       ...others
     } = this.props;
     const _style = styleMerge(null, stroke, style); // 存放fill、stroke与自定义样式
+
+    // 直线不会有填充
+    _style.fill && delete _style.fill;
     
     return (
       <line x1={x1} y1={y1} x2={x2} y2={y2} style={_style} {...others} />
