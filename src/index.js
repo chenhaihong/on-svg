@@ -1,11 +1,11 @@
-import Svg from './components/Svg';
-
-import Rect from './components/Rect';
-import Circle from './components/Circle';
-import Ellipse from './components/Ellipse';
-import Line from './components/Line';
-import Polyline from './components/Polyline';
-import Polygon from './components/Polygon';
+import Svg from './elements/Svg';
+import Rect from './elements/Rect';
+import Circle from './elements/Circle';
+import Ellipse from './elements/Ellipse';
+import Line from './elements/Line';
+import Polyline from './elements/Polyline';
+import Polygon from './elements/Polygon';
+import Path from './elements/Path';
 
 export default Svg;
 
@@ -16,4 +16,5 @@ export {
   Line,
   Polyline,
   Polygon,
+  Path,
 };
