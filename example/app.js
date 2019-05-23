@@ -4,6 +4,7 @@ import OnSvg, { Rect, } from 'on-svg';
 import Ball from './components/Ball';
 import Flag from './components/Flag';
 import Star from './components/Star';
+import SoPath from './components/SoPath';
 
 class App extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class App extends React.Component {
         <Flag />
         <Star center={{ x: 200, y: 200 }} radius={100} />
         <Ball center={{ x: 200, y: 200 }} />
+        <SoPath />
       </OnSvg>
     );
   }

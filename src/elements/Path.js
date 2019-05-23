@@ -41,7 +41,7 @@ export default class Path extends React.Component {
  * [H] x               = horizontal lineto   沿着x轴移动一段位置。
  * [V] y               = vertical lineto     沿着y轴移动一段位置。
  * [C] x1 y1 x2 y2 x y = curveto             三次贝塞尔曲线。
- *                                         当前点为起点，x、y为终点，起点和x1、y1控制曲线起始的斜率，终点和x2、y2控制结束的斜率。
+ *                                           当前点为起点，x、y为终点，起点和x1、y1控制曲线起始的斜率，终点和x2、y2控制结束的斜率。
  * [S] x2 y2 x y       = smooth curveto    简化的贝塞尔曲线。
  *                                         1.如果S命令跟在一个C命令或者另一个S命令的后面，它的第一个控制点，就会被假设成前一个控制点的对称点。
  *                                         2.如果S命令单独使用，前面没有C命令或者另一个S命令，那么它的两个控制点就会被假设为同一个点。
